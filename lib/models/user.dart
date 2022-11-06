@@ -7,12 +7,15 @@ class User extends Equatable {
   final String? lastName;
   final String? email;
   final String? phoneNumber;
+  final String? passWord;
 
-  User({
+  User(
+    {
     this.firstName,
     this.lastName,
     this.email,
     this.phoneNumber,
+    this.passWord,
   });
 
   factory User.fromJson(Map<String, dynamic> json) {
@@ -21,6 +24,7 @@ class User extends Equatable {
       lastName: json[S.lastnameKey] as String?,
       email: json[S.emailKey] as String?,
       phoneNumber: json[S.phoneKey] as String?,
+      passWord: json[S.passwordKey] as String?,
     );
   }
 
